@@ -17,7 +17,6 @@ var uglify                  = require('gulp-uglify');
 // General plugins
 var browserSync             = require('browser-sync');
 var reload                  = browserSync.reload;
-var notify                  = require('gulp-notify');
 
 // -------------------------------------------------------------------------
 // TASKS
@@ -34,8 +33,6 @@ gulp.task('css', function() {
         .pipe(cssmin())
         // Where to store the finalized CSS
         .pipe(gulp.dest('css'))
-        // Notify us that the task was completed
-        .pipe(notify({ message: 'CSS task complete' }));
 });
 
 // JS tasks
@@ -47,8 +44,6 @@ gulp.task('js', function() {
         .pipe(uglify())
         // Where to store the finalized JS
         .pipe(gulp.dest('js'))
-        // Notify us that the task was completed
-        .pipe(notify({ message: 'Javascript task complete' }));
 });
 
 // Watch files for changes

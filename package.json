@@ -1,0 +1,29 @@
+{
+  "name": "paimio",
+  "version": "1.0.0",
+  "description": "#### Description This is a site for an installation at the Paimio Sanatorium in Finland.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OskarRadon/paimio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OskarRadon/paimio/issues"
+  },
+  "homepage": "https://github.com/OskarRadon/paimio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}

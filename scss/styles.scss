@@ -1,11 +1,36 @@
+html {
+  background: linear-gradient(302deg, #6fc2b9, #9fe8f2, #f2e0bd, #85b4fc);
+  background-size: 1000% 1000%;
+  -webkit-animation: gradient 13s ease infinite;
+  -moz-animation: gradient 13s ease infinite;
+  animation: gradient 13s ease infinite;
+  @-webkit-keyframes gradient {
+      0%{background-position:99% 0%}
+      50%{background-position:2% 100%}
+      100%{background-position:99% 0%}
+  }
+  @-moz-keyframes gradient {
+      0%{background-position:99% 0%}
+      50%{background-position:2% 100%}
+      100%{background-position:99% 0%}
+  }
+  @keyframes gradient {
+      0%{background-position:99% 0%}
+      50%{background-position:2% 100%}
+      100%{background-position:99% 0%}
+  }
+}
+
+.container {
+  padding: 20px;
+}
 ul {
   float: left;
   list-style: none;
   margin: 0px;
-  padding: 0px;
+  padding: 5px 5px 5px 0;
   li {
-    overflow:none;
     word-wrap: break-word;
-    width: 75px;
+    width: 80px;
   }
 }

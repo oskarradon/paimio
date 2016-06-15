@@ -1,6 +1,12 @@
+.two {
+  width: 100px;
+  background: yellow; }
+
 ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0px; }
+  ul li a {
+    display: block;
+    width: 100px; }
 
 /*# sourceMappingURL=styles.css.map */

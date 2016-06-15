@@ -1,5 +1,22 @@
+// .bottom {
+//   display: flex;
+//   flex-direction: row;
+// }
+.two {
+  width: 100px;
+  background: yellow;
+}
 ul {
   list-style: none;
-  margin:0px;
-  padding: 0px;
+  margin: 0px;
+  // padding: 0px;
+  // width: 100px;
+  // float: left;
+  li {
+    // float: left;
+    a {
+      display: block;
+      width: 100px;
+    }
+  }
 }

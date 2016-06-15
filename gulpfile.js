@@ -25,73 +25,49 @@ var notify                  = require('gulp-notify');
 
 // CSS tasks
 gulp.task('css', function() {
-    return gulp.src('src/scss/**/*')
+    return gulp.src('scss/**/*')
         // Compile Sass
         .pipe(sass({ style: 'compressed', noCache: true }))
-        // Combine media queries
-        .pipe(combineMediaQueries())
         // parse CSS and add vendor-prefixed CSS properties
         .pipe(autoprefixer())
         // Minify CSS
         .pipe(cssmin())
         // Where to store the finalized CSS
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('css'))
         // Notify us that the task was completed
         .pipe(notify({ message: 'CSS task complete' }));
 });
 
 // JS tasks
 gulp.task('js', function() {
-    return gulp.src('src/js/**/*')
+    return gulp.src('js/**/*')
         // Concatenate all JS files into one
         .pipe(concat('production.js'))
         // Minify JS
         .pipe(uglify())
         // Where to store the finalized JS
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest('js'))
         // Notify us that the task was completed
         .pipe(notify({ message: 'Javascript task complete' }));
-});
-
-// Image tasks
-gulp.task('images', function() {
-    return gulp.src('src/images/raster/*')
-        // Minify the images
-        .pipe(imagemin())
-        // Where to store the finalized images
-        .pipe(gulp.dest('build/images'))
-        // Notify us that the task was completed
-        .pipe(notify({ message: 'Image task complete' }));
-});
-
-// SVG tasks
-gulp.task('svgs', function() {
-    return gulp.src('src/images/vector/*')
-        // Minify the SVG's
-        .pipe(svgmin())
-        // Where to store the finalized SVG's
-        .pipe(gulp.dest('build/images'))
-        // Notify us that the task was completed
-        .pipe(notify({ message: 'SVG task complete' }));
 });
 
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
     // Watch HTML files
-    gulp.watch('build/*.html', reload);
+    gulp.watch('*.html', reload);
     // Watch Sass files
-    gulp.watch('src/scss/**/*', ['css']);
+    gulp.watch('scss/**/*', ['css']);
     // Watch JS files
-    gulp.watch('src/js/**/*', ['js']);
+    gulp.watch('js/**/*', ['js']);
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['build/css/*', 'build/js/*'], {
+    browserSync.init(['css/*', 'js/*'], {
         server: {
-            baseDir: "build"
+            baseDir: ""
         }
     });
 });
 
 // Default task
-gulp.task('default', ['css', 'js', 'watch', 'browser-sync']);
+gulp.task('serve', ['css', 'js', 'watch', 'browser-sync']);

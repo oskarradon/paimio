@@ -36,15 +36,15 @@ gulp.task('css', function() {
 });
 
 // JS tasks
-gulp.task('js', function() {
-    return gulp.src('js/**/*')
-        // Concatenate all JS files into one
-        .pipe(concat('production.js'))
-        // Minify JS
-        .pipe(uglify())
-        // Where to store the finalized JS
-        .pipe(gulp.dest('js'))
-});
+// gulp.task('js', function() {
+//     return gulp.src('js/**/*')
+//         // Concatenate all JS files into one
+//         .pipe(concat('production.js'))
+//         // Minify JS
+//         .pipe(uglify())
+//         // Where to store the finalized JS
+//         .pipe(gulp.dest('js'))
+// });
 
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
@@ -65,4 +65,4 @@ gulp.task('browser-sync', function() {
 });
 
 // Default task
-gulp.task('serve', ['css', 'js', 'watch', 'browser-sync']);
+gulp.task('serve', ['css', 'watch', 'browser-sync']);

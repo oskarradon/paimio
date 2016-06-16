@@ -10,15 +10,23 @@ html {
 
 .container {
   padding: 20px;
+  @media (min-width: 1000px) {
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+.description {
+  max-width: 500px;
 }
 
 ul {
   float: left;
   list-style: none;
   margin: 0px;
-  padding: 5px 5px 5px 0;
+  padding: 5px 20px 5px 0;
   li {
     word-wrap: break-word;
-    width: 80px;
+    width: 100px;
   }
 }

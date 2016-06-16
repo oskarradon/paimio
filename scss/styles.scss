@@ -18,27 +18,32 @@ html {
 
 .container {
   padding: 20px;
-  @media (min-width: 1000px) {
-    width: 1000px;
+  @media (min-width: $desktop) {
+    width: $desktop;
     margin: auto;
   }
 }
 
 .description {
-  max-width: 500px;
+  max-width: 600px;
 }
 
-.bottom {
-
-}
-
-ul {
-  float: left;
-  list-style: none;
-  margin: 0px;
-  padding: 5px 20px 5px 0;
-  li {
-    word-wrap: break-word;
-    width: 100px;
+.lower {
+  margin-top: 60px;
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    column-count: 2;
+    @media (min-width: $tablet) {
+      column-count: 4;
+    }
+    @media (min-width: $desktop) {
+      column-count: 5;
+    }
+    li {
+      word-wrap: break-word;
+    }
   }
 }

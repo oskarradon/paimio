@@ -5,6 +5,10 @@
 // Include Gulp
 var gulp                    = require('gulp');
 
+
+// Include Jade
+var jade                    = require('gulp-jade');
+
 // CSS plugins
 var sass                    = require('gulp-sass');
 var autoprefixer            = require('gulp-autoprefixer');
@@ -22,17 +26,26 @@ var reload                  = browserSync.reload;
 // TASKS
 // -------------------------------------------------------------------------
 
+
+// Jade tasks
+gulp.task('jade', function() {
+  return gulp.src('jade/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest(''))
+});
+
+
 // CSS tasks
 gulp.task('css', function() {
-    return gulp.src('scss/**/*')
-        // Compile Sass
-        .pipe(sass({ style: 'compressed', noCache: true }))
-        // parse CSS and add vendor-prefixed CSS properties
-        .pipe(autoprefixer())
-        // Minify CSS
-        .pipe(cssmin())
-        // Where to store the finalized CSS
-        .pipe(gulp.dest('css'))
+  return gulp.src('scss/**/*')
+    // Compile Sass
+    .pipe(sass({ style: 'compressed', noCache: true }))
+    // parse CSS and add vendor-prefixed CSS properties
+    .pipe(autoprefixer())
+    // Minify CSS
+    .pipe(cssmin())
+    // Where to store the finalized CSS
+    .pipe(gulp.dest('css'))
 });
 
 // JS tasks
@@ -48,21 +61,23 @@ gulp.task('css', function() {
 
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
-    // Watch HTML files
-    gulp.watch('*.html', reload);
-    // Watch Sass files
-    gulp.watch('scss/**/*', ['css']);
-    // Watch JS files
-    gulp.watch('js/**/*', ['js']);
+  // Watch HTML files
+  gulp.watch('*.html', reload);
+  // Watch Sass files
+  gulp.watch('scss/**/*', ['css']);
+  // Watch jade files
+  gulp.watch('jade/**/*', ['jade']);
+  // Watch JS files
+  gulp.watch('js/**/*', ['js']);
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['css/*', 'js/*'], {
-        server: {
-            baseDir: ""
-        }
-    });
+  browserSync.init(['css/*', 'js/*'], {
+    server: {
+      baseDir: ""
+    }
+  });
 });
 
 // Default task
-gulp.task('serve', ['css', 'watch', 'browser-sync']);
+gulp.task('serve', ['css', 'jade', 'watch', 'browser-sync']);

@@ -1,24 +1,6 @@
 html {
-  background: linear-gradient(302deg, #6fc2b9, #9fe8f2, #f2e0bd, #85b4fc);
-  background-size: 1000% 1000%;
-  -webkit-animation: gradient 13s ease infinite;
-  -moz-animation: gradient 13s ease infinite;
-  animation: gradient 13s ease infinite;
-  @-webkit-keyframes gradient {
-      0%{background-position:99% 0%}
-      50%{background-position:2% 100%}
-      100%{background-position:99% 0%}
-  }
-  @-moz-keyframes gradient {
-      0%{background-position:99% 0%}
-      50%{background-position:2% 100%}
-      100%{background-position:99% 0%}
-  }
-  @keyframes gradient {
-      0%{background-position:99% 0%}
-      50%{background-position:2% 100%}
-      100%{background-position:99% 0%}
-  }
+  background: linear-gradient(302deg, #f2e0bd, #85b4fc, #6fc2b9, #9fe8f2);
+  height: 100vh;
 }
 
 .container {

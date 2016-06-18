@@ -29,8 +29,8 @@ var reload                  = browserSync.reload;
 
 // Jade tasks
 gulp.task('jade', function() {
-  return gulp.src('jade/*.jade')
-    .pipe(jade())
+  return gulp.src('*.jade')
+    .pipe(jade({ pretty: true }))
     .pipe(gulp.dest(''))
 });
 
@@ -66,7 +66,7 @@ gulp.task('watch', ['browser-sync'], function() {
   // Watch Sass files
   gulp.watch('scss/**/*', ['css']);
   // Watch jade files
-  gulp.watch('jade/**/*', ['jade']);
+  gulp.watch('*.jade', ['jade']);
   // Watch JS files
   gulp.watch('js/**/*', ['js']);
 });

@@ -1,0 +1,18 @@
+.popup {
+  max-width: 300px;
+  background: rgba(255, 255, 255, .7);
+  padding: 10px;
+  // opacity: 0;
+  p, a {
+    margin: 0px;
+  }
+  .x {
+    float: right;
+  }
+}
+
+div.link1 {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}

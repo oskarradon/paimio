@@ -18,7 +18,7 @@ $color5    : #f2e0bd;
 html {
   background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color5);
   background-size: 1000%;
-  animation: gradient 10s infinite ease-in-out alternate;
+  animation: gradient 25s infinite ease-in-out alternate;
   @keyframes gradient {
     0% { background-position: left; }
     100% { background-position: right; }

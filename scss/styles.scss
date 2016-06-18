@@ -1,3 +1,6 @@
+@import 'popup';
+
+
 // VARIABLES
 
 // breakpoints for media queries
@@ -5,9 +8,15 @@ $phone-lg  : 400px;
 $tablet    : 500px;
 $desktop   : 800px;
 
+//colors for gradient
+$color1    : #f2e0bd;
+$color2    : #85b4fc;
+$color3    : #6fc2b9;
+$color4    : #9fe8f2;
+$color5    : #f2e0bd;
 
 html {
-  background: linear-gradient(302deg, #f2e0bd, #85b4fc, #6fc2b9, #9fe8f2, #f2e0bd);
+  background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color5);
   background-size: 1000%;
   animation: gradient 10s infinite ease-in-out alternate;
   @keyframes gradient {

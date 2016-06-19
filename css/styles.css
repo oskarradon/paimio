@@ -1,4 +1,5 @@
 .popup {
+  position: absolute;
   max-width: 300px;
   background: rgba(255, 255, 255, 0.7);
   padding: 10px; }
@@ -8,15 +9,6 @@
     float: right; }
   .popup img {
     max-width: 300px; }
-
-div.link1 {
-  position: absolute;
-  top: 200px;
-  left: 100px; }
-
-div.link3 {
-  position: absolute;
-  right: 400px; }
 
 html {
   background: linear-gradient(302deg, #f2e0bd, #85b4fc, #6fc2b9, #9fe8f2, #f2e0bd);

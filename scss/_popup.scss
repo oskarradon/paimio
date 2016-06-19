@@ -1,5 +1,6 @@
 .popup {
   // z-index: 99;
+  position: absolute;
   max-width: 300px;
   background: rgba(255, 255, 255, .7);
   padding: 10px;
@@ -13,18 +14,4 @@
   img {
     max-width: 300px;
   }
-}
-
-// positioning each popup
-// maybe make a script to randomize this?
-
-div.link1 {
-  position: absolute;
-  top: 200px;
-  left: 100px;
-}
-
-div.link3 {
-  position: absolute;
-  right: 400px;
 }

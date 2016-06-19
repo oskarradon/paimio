@@ -5,7 +5,7 @@ function randomNumber(min, max) {
 $(function() {
   var z = 10; // variable for z-index
 
-  $(".popup").hide();
+  // $(".popup").hide();
   $('a').click(function(e) {
     e.preventDefault();
 
@@ -13,7 +13,8 @@ $(function() {
     var windowWidth = $(window).width();
     var classname = $(this).attr('class');
 
-    $('.popup.' + classname).toggle().css({
+    $('.popup.' + classname).show().css({
+      'opacity' : 1,
       'z-index' : z,
       'left' : randomNumber(1, (windowWidth - 300)) + 'px',
       'top' : randomNumber(1, (windowHeight - 500)) + 'px'

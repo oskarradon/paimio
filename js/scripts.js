@@ -13,10 +13,10 @@ $(function() {
     var windowWidth = $(window).width();
     var classname = $(this).attr('class');
 
-    $('.popup.' + classname).show().css({
+    $('.popup.' + classname).toggle().css({
       'z-index' : z,
       'left' : randomNumber(1, (windowWidth - 300)) + 'px',
-      'top' : randomNumber(1, (windowHeight - 600)) + 'px'
+      'top' : randomNumber(1, (windowHeight - 500)) + 'px'
     });
     z += 1;
   });

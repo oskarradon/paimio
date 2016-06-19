@@ -68,7 +68,7 @@ gulp.task('watch', ['browser-sync'], function() {
   // Watch jade files
   gulp.watch('*.jade', ['jade']);
   // Watch JS files
-  gulp.watch('js/**/*', ['js']);
+  // gulp.watch('js/**/*', ['js']);
 });
 
 gulp.task('browser-sync', function() {

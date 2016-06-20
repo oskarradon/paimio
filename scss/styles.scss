@@ -72,6 +72,11 @@ body {
   }
 }
 
-a:visited {
-  color: blue;
+a {
+  &:visited {
+    color: blue;
+  }
+  &:hover {
+    text-decoration: none;
+  }
 }

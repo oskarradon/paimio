@@ -24,6 +24,21 @@ html {
     100% { background-position: right; }
   }
 }
+body {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Paimio_Sanatorium2.jpg');
+  background-size: cover;
+  opacity: .1;
+  z-index: -999;
+  position: absolute;
+}
 
 .container {
   padding: 20px;

@@ -9,19 +9,14 @@ $(function() {
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
     var classname = $(this).attr('class');
-    if(classname === undefined) {
-      // do nothing lol
-      return
-    } else {
-      e.preventDefault();
-      $('.popup.' + classname).show().css({
-        'opacity' : 1,
-        'z-index' : z,
-        'left' : randomNumber(1, (windowWidth - 300)) + 'px',
-        'top' : randomNumber(1, (windowHeight - 500)) + 'px'
-      });
-      z += 1;
-    }
+
+    $('.popup.' + classname).show().css({
+      'opacity' : 1,
+      'z-index' : z,
+      'left' : randomNumber(1, (windowWidth - 300)) + 'px',
+      'top' : randomNumber(1, (windowHeight - 500)) + 'px'
+    });
+    z += 1;
   });
 
   // hide div w class === x link class

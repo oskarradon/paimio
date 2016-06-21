@@ -1,17 +1,23 @@
-.popup {
+div.popup {
   position: absolute;
   max-width: 300px;
   background: rgba(255, 255, 255, .7);
-  padding: 10px;
+  padding: 0 16px;
   display: none;
+  text-align: center;
   p, a {
-    margin: 0px;
+    // margin: 0px;
+    text-align: left;
   }
   .x {
     float: right;
+    margin-top: 16px;
   }
   img {
     max-width: 300px;
+    margin: 0 0 13px;
+
+    
   }
 }
 

@@ -5,7 +5,7 @@
 
 // breakpoints for media queries
 $phone-lg  : 400px;
-$tablet    : 500px;
+$tablet    : 600px;
 $desktop   : 800px;
 
 //colors for gradient
@@ -59,15 +59,16 @@ body {
     margin: 0px;
     padding: 0px;
     height: 100%;
-    column-count: 2;
+    column-count: 1;
     @media (min-width: $tablet) {
-      column-count: 4;
+      column-count: 2;
     }
     @media (min-width: $desktop) {
-      column-count: 5;
+      column-count: 3;
     }
     li {
       word-wrap: break-word;
+      margin: 4px 0;
     }
   }
 }

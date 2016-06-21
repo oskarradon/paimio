@@ -21,10 +21,8 @@ $(function() {
 
   // hide div w class === x link class
   
-  $('.x').click(function(e) {
-    e.preventDefault();
-    var classes = $(this).attr('class');
-    var classname = classes.split(' ')[1];
+  $('.x').click(function() {
+    var classname = $(this).attr('class').split(' ')[1];
     $('.popup.' + classname).hide();
   });
 

@@ -14,7 +14,7 @@ $(function() {
       'opacity' : 1,
       'z-index' : z,
       'left' : randomNumber(1, (windowWidth - 300)) + 'px',
-      'top' : randomNumber(1, (windowHeight - 500)) + 'px'
+      'top' : randomNumber(1, (windowHeight - 700)) + 'px'
     });
     z += 1;
   });

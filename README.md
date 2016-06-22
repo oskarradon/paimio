@@ -1,7 +1,7 @@
-## A Healing Machine
+## To heal a healing machine
 
 #### Description
-This is a site for an installation at the Paimio Sanatorium in Finland.
+This is a site for a project by [Mikko Kuorinki](http://www.kuorinki.com) and [Lisa Radon](http://www.lisaradon.com) at the Paimio Sanatorium in Finland.
 
 #### Instructions
 To set up a local version of this project 

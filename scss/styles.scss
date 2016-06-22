@@ -22,7 +22,6 @@ html {
   background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color1);
   background-size: 1000%;
   animation: gradient 25s infinite ease-in-out alternate;
-  overflow: hidden;
   @keyframes gradient {
     0% { background-position: left; }
     100% { background-position: right; }
@@ -31,13 +30,18 @@ html {
     padding: 0px;
     margin: 0px;
     .bg {
-      height: 100vh;
-      width: 100vw;
       background: url('../assets/img/bg.jpg');
-      background-size: cover;
+      height: 130%;
+      width: 100%;
       opacity: .1;
       z-index: -999;
       position: absolute;
+      background-size: cover;
+      background-position: right;
+      @media (min-width: $tablet) {
+        height: 100vh;
+        width: 100vw;
+      }
     }
     .container {
       padding: 20px;

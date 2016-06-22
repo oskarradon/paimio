@@ -9,11 +9,12 @@
     margin: 30px 24px 24px 26px;
   }
   .x {
-    float: right;
-    margin: 8px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
   }
   img, iframe, audio {
-    margin: 30px 0 24px 26px;
+    margin: 30px 30px 26px;
   }
   img {
     max-width: 300px;

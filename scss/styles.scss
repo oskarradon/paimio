@@ -22,6 +22,7 @@ html {
   background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color1);
   background-size: 1000%;
   animation: gradient 25s infinite ease-in-out alternate;
+  overflow: hidden;
   @keyframes gradient {
     0% { background-position: left; }
     100% { background-position: right; }

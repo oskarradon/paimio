@@ -5,7 +5,10 @@ function randomNumber(min, max) {
 $(function() {
   var z = 10; // variable for z-index
 
+  // Show popups when you click an li
+
   $('a').click(function(e) {
+    
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
     var classname = $(this).attr('class');
@@ -15,16 +18,32 @@ $(function() {
       'z-index' : z,
       'left' : randomNumber(1, (windowWidth - 300)) + 'px',
       'top' : randomNumber(1, (windowHeight - 700)) + 'px'
-    });
+    }).addClass('showing');
     z += 1;
+
+    // show closeAll link if there's more than 1 popup
+
+    if ($('.showing').length > 2) {
+      $('#closeAll').show();
+    } else {
+      $('#closeAll').hide();
+    }
   });
 
   // hide div w class === x link class
   
   $('.x').click(function() {
     var classname = $(this).attr('class').split(' ')[1];
-    $('.popup.' + classname).hide();
+    $('.popup.' + classname).removeClass('showing').hide();
   });
+
+  // close all 
+
+  $('#closeAll').click(function() {
+    $('.showing').removeClass('showing').hide();
+    $('#closeAll').hide();
+  });
+
 
   // make divs draggable
   // code by Taufik Nurrohman

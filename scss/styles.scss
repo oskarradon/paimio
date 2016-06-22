@@ -1,10 +1,11 @@
+// IMPORTS
+
 @import 'popup';
 
 
 // VARIABLES
 
 // breakpoints for media queries
-$phone-lg  : 400px;
 $tablet    : 600px;
 $desktop   : 800px;
 
@@ -13,10 +14,12 @@ $color1    : #f2e0bd;
 $color2    : #85b4fc;
 $color3    : #6fc2b9;
 $color4    : #9fe8f2;
-$color5    : #f2e0bd;
+
+
+// STYLIN
 
 html {
-  background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color5);
+  background: linear-gradient(302deg, $color1, $color2, $color3, $color4, $color1);
   background-size: 1000%;
   animation: gradient 25s infinite ease-in-out alternate;
   @keyframes gradient {
@@ -26,25 +29,22 @@ html {
   body {
     padding: 0px;
     margin: 0px;
-    // overflow: hidden;
-  }
-}
-
-.bg {
-  height: 100vh;
-  width: 100vw;
-  background: url('../img/bg.jpg');
-  background-size: cover;
-  opacity: .1;
-  z-index: -999;
-  position: absolute;
-}
-
-.container {
-  padding: 20px;
-  @media (min-width: $desktop) {
-    width: $desktop;
-    margin: auto;
+    .bg {
+      height: 100vh;
+      width: 100vw;
+      background: url('../img/bg.jpg');
+      background-size: cover;
+      opacity: .1;
+      z-index: -999;
+      position: absolute;
+    }
+    .container {
+      padding: 20px;
+      @media (min-width: $desktop) {
+        width: $desktop;
+        margin: auto;
+      }
+    }
   }
 }
 

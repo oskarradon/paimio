@@ -41,6 +41,7 @@ html {
       @media (min-width: $tablet) {
         height: 100vh;
         width: 100vw;
+        overflow: hidden;
       }
     }
     .container {
@@ -51,6 +52,10 @@ html {
       }
     }
   }
+}
+
+h1 {
+  font-weight: 400;
 }
 
 .lower {

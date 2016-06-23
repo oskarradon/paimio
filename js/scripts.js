@@ -35,6 +35,10 @@ $(function() {
   $('.x').click(function() {
     var classname = $(this).attr('class').split(' ')[1];
     $('.popup.' + classname).removeClass('showing').hide();
+    $.each($('audio'), function () {
+    this.pause();
+});
+    
   });
 
   // close all 

@@ -26,12 +26,15 @@ html {
     0% { background-position: left; }
     100% { background-position: right; }
   }
+  @media (min-width: $tablet) {
+    overflow: hidden;
+  }
   body {
     padding: 0px;
     margin: 0px;
     .bg {
       background: url('../assets/img/bg.jpg');
-      height: 240%;
+      height: 180%;
       width: 100%;
       opacity: .1;
       z-index: -999;
@@ -41,7 +44,6 @@ html {
       @media (min-width: $tablet) {
         height: 100vh;
         width: 100vw;
-        overflow: hidden;
       }
     }
     .container {

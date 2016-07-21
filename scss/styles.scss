@@ -60,7 +60,7 @@ h1 {
   font-weight: 400;
 }
 
-nav a:nth-last-of-type(1) {
+nav a:nth-of-type(2), nav a:nth-of-type(3) {
   margin-left: 20px;
 }
 

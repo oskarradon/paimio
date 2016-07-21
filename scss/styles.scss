@@ -80,7 +80,7 @@ nav a:nth-of-type(2), nav a:nth-of-type(3) {
     }
     li {
       word-wrap: break-word;
-      margin: 4px 0;
+      margin: 4px 0 0;
     }
   }
 }
@@ -100,7 +100,11 @@ a {
   }
 }
 
-.doc {
+.lower.doc {
   width: 40vw;
   max-width: 500px;
+  ul li {
+    margin: 0;
+    line-height: 1.4em;
+  }
 }

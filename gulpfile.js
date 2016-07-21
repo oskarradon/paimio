@@ -17,6 +17,7 @@ var cssmin                  = require('gulp-cssmin');
 // JS plugins
 var concat                  = require('gulp-concat');
 var uglify                  = require('gulp-uglify');
+var del                     = require('del');
 
 // General plugins
 var browserSync             = require('browser-sync');
@@ -49,6 +50,12 @@ gulp.task('css', function() {
 });
 
 // JS tasks
+
+gulp.task('cleanJs', function() {
+  // Delete minified scripts
+  del(['js/scripts.min.js']);
+});
+
 gulp.task('js', function() {
     return gulp.src('js/*')
         // Minify JS
@@ -67,7 +74,7 @@ gulp.task('watch', ['browser-sync'], function() {
   // Watch jade files
   gulp.watch('*.jade', ['jade']);
   // Watch JS files
-  gulp.watch('scripts.js', ['js']);
+  gulp.watch('scripts.js', ['cleanJs', 'js']);
 });
 
 gulp.task('browser-sync', function() {
@@ -79,4 +86,4 @@ gulp.task('browser-sync', function() {
 });
 
 // Default task
-gulp.task('serve', ['css', 'jade', 'js', 'watch', 'browser-sync']);
+gulp.task('serve', ['css', 'jade', 'cleanJs', 'js', 'watch', 'browser-sync']);

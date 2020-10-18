@@ -3,7 +3,7 @@
 #### Description
 This is a site for a project by [Mikko Kuorinki](http://www.kuorinki.com) and [Lisa Radon](http://www.lisaradon.com) at the Paimio Sanatorium in Finland.
 
-http://ahealingmachine.com
+http://ahealingmachine.com (Site now broken :/ )
 
 #### Instructions
 To set up a local version of this project:
